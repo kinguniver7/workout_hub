@@ -147,7 +147,7 @@ class _HomePageState extends State<HomePage> {
                    begin: Alignment.bottomCenter,
                    end: Alignment.topCenter,
                    colors: [
-                     Color(0xff4d5aea),
+                     Color(0xff4D5292),
                      Color(0xff252847),                   
                  ],
                  ),                         

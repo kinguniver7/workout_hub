@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:reorderables/reorderables.dart';
-import 'package:workout_hub/common/error_messages.dart';
 import 'package:workout_hub/common/helpers/workout_helpers.dart';
-import 'package:workout_hub/model/enums/workout_level_type.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:workout_hub/model/enums/workout_type.dart';
 import 'package:workout_hub/model/params/workout_lits_params.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:workout_hub/model/workout_model.dart';
 import 'package:workout_hub/widgets/workout_page/workout_reorderable_card.dart';
 
 class WorkoutListPage extends StatefulWidget {
@@ -17,20 +15,25 @@ class WorkoutListPage extends StatefulWidget {
 }
 
 class _WorkoutListPageState extends State<WorkoutListPage> {
-
-List<String> alphabetList = [
-    'J',
-    'B',
-    'C',
-    'D',
-    'E',
-    'F',
-    'G',
-    'H',
-    'I',
-    'J'
-  ];
-
+  List<WorkoutModel> workoutList = List<WorkoutModel>();
+  
+  @override
+  void initState() {
+    // TODO: implement initState
+    workoutList.add(WorkoutModel(title: "Jumping jacks1"));
+    workoutList.add(WorkoutModel(title: "Jumping jacks2"));
+    workoutList.add(WorkoutModel(title: "Jumping jacks3"));
+    workoutList.add(WorkoutModel(title: "Jumping jacks4"));
+    workoutList.add(WorkoutModel(title: "Jumping jacks1"));
+    workoutList.add(WorkoutModel(title: "Jumping jacks2"));
+    workoutList.add(WorkoutModel(title: "Jumping jacks3"));
+    workoutList.add(WorkoutModel(title: "Jumping jacks4"));
+    workoutList.add(WorkoutModel(title: "Jumping jacks1"));
+    workoutList.add(WorkoutModel(title: "Jumping jacks2"));
+    workoutList.add(WorkoutModel(title: "Jumping jacks3"));
+    workoutList.add(WorkoutModel(title: "Jumping jacks4"));
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -67,8 +70,8 @@ List<String> alphabetList = [
             ),
             ReorderableSliverList(
               delegate: ReorderableSliverChildBuilderDelegate(
-                (BuildContext context, int index) => WorkoutReorderableCard(alphabetList, index, Key('$index')),
-                childCount: alphabetList.length
+                (BuildContext context, int index) => WorkoutReorderableCard(workoutList, index, Key('$index')),
+                childCount: workoutList.length
               ),
               onReorder: (oldIndex, newIndex)=>{ }
             ),            
