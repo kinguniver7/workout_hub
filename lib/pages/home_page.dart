@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:workout_hub/common/constants.dart';
+import 'package:workout_hub/model/enums/workout_level_type.dart';
+import 'package:workout_hub/model/enums/workout_type.dart';
+import 'package:workout_hub/model/params/workout_lits_params.dart';
+import 'package:workout_hub/widgets/home_page/play_panel.dart';
 import 'package:workout_hub/widgets/home_page/today_panel.dart';
+import 'package:workout_hub/widgets/left_drawer.dart';
+
+import 'package:easy_localization/easy_localization.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -11,31 +19,103 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: LeftDrawer(),
+      appBar: AppBar(title: Text('home_page.title').tr(),),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
-        children: <Widget>[
-          Stack(  
-            alignment: Alignment.center,          
-            children: <Widget>[
-              buildClipPath(),
-              Positioned(
-                bottom: 0,
-                child: SvgPicture.asset("assets/coach/man_1.svg", height: 150,  )           
-              ),         
-            ],
-          ),
-          Center(
-            child: FlatButton(
-                shape: CircleBorder(
-                  side: BorderSide(color: Colors.black12)
+        children: <Widget>[          
+          Expanded(
+            child: new ListView(
+              shrinkWrap: true,
+              children: <Widget>[
+                Container(
+                  child: Stack(  
+                    alignment: Alignment.center,          
+                    children: <Widget>[
+                      buildClipPath(),
+                      Positioned(
+                        bottom: 20,
+                        child: Container(
+                          height: 140.0,
+                          width: 140.0,
+                          child: Center(child: SvgPicture.asset("assets/coach/man_1.svg", height: 130,)),
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.white,
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Theme.of(context).primaryColor,
+                                  blurRadius: 1.0,
+                                  //offset: Offset(2.0, 2.0),
+                                  spreadRadius: 1.0)
+                            ],
+                          ),
+                        ),
+                      )              
+                    ],
+                  ),
                 ),
-                child: Icon(Icons.edit),
-                color: Colors.white,
-                onPressed: () {                    
-                },
-              ),
-          ),
-          TodayPanel()   
+                Wrap(
+                  //spacing: 20,
+                  runSpacing: 12,
+                  children: <Widget>[
+                    TodayPanel(),
+                    
+                    Center(child: Text('level_beginner.title'.tr(), style: Theme.of(context).textTheme.headline6,)),
+                    InkWell(
+                      onTap: () => {Navigator.pushNamed(context, Constants.ROOUTE_NAME_TO_WORKOUT_LIST_PAGE, arguments: WorkoutListParams(WorkoutLevelType.beginner, WorkoutType.arm))}, 
+                      child: PlayPanel(WorkoutListParams(WorkoutLevelType.beginner, WorkoutType.arm)),),
+                    InkWell(
+                      onTap: () => {Navigator.pushNamed(context, Constants.ROOUTE_NAME_TO_WORKOUT_LIST_PAGE, arguments: WorkoutListParams(WorkoutLevelType.beginner, WorkoutType.leg))},
+                      child: PlayPanel(WorkoutListParams(WorkoutLevelType.beginner, WorkoutType.leg))), 
+                    InkWell(
+                      onTap: () => {Navigator.pushNamed(context, Constants.ROOUTE_NAME_TO_WORKOUT_LIST_PAGE, arguments: WorkoutListParams(WorkoutLevelType.beginner, WorkoutType.abs))},
+                      child: PlayPanel(WorkoutListParams(WorkoutLevelType.beginner, WorkoutType.abs))), 
+                    InkWell(
+                      onTap: () => {Navigator.pushNamed(context, Constants.ROOUTE_NAME_TO_WORKOUT_LIST_PAGE, arguments: WorkoutListParams(WorkoutLevelType.beginner, WorkoutType.chest))},
+                      child: PlayPanel(WorkoutListParams(WorkoutLevelType.beginner, WorkoutType.chest))),
+                    InkWell(
+                      onTap: () => {Navigator.pushNamed(context, Constants.ROOUTE_NAME_TO_WORKOUT_LIST_PAGE, arguments: WorkoutListParams(WorkoutLevelType.beginner, WorkoutType.shoulder))},
+                      child: PlayPanel(WorkoutListParams(WorkoutLevelType.beginner, WorkoutType.shoulder))),
+                    
+                    Center(child: Text('level_intermediate.title'.tr(), style: Theme.of(context).textTheme.headline6,)),
+                    InkWell(
+                      onTap: () => {Navigator.pushNamed(context, Constants.ROOUTE_NAME_TO_WORKOUT_LIST_PAGE, arguments: WorkoutListParams(WorkoutLevelType.intermediate, WorkoutType.arm))},
+                      child: PlayPanel(WorkoutListParams(WorkoutLevelType.intermediate, WorkoutType.arm))), 
+                    InkWell(
+                      onTap: () => {Navigator.pushNamed(context, Constants.ROOUTE_NAME_TO_WORKOUT_LIST_PAGE, arguments: WorkoutListParams(WorkoutLevelType.intermediate, WorkoutType.leg))},
+                      child: PlayPanel(WorkoutListParams(WorkoutLevelType.intermediate, WorkoutType.leg))), 
+                    InkWell(
+                      onTap: () => {Navigator.pushNamed(context, Constants.ROOUTE_NAME_TO_WORKOUT_LIST_PAGE, arguments: WorkoutListParams(WorkoutLevelType.intermediate, WorkoutType.abs))},
+                      child: PlayPanel(WorkoutListParams(WorkoutLevelType.intermediate, WorkoutType.abs))), 
+                    InkWell(
+                      onTap: () => {Navigator.pushNamed(context, Constants.ROOUTE_NAME_TO_WORKOUT_LIST_PAGE, arguments: WorkoutListParams(WorkoutLevelType.intermediate, WorkoutType.chest))},
+                      child: PlayPanel(WorkoutListParams(WorkoutLevelType.intermediate, WorkoutType.chest))),
+                    InkWell(
+                      onTap: () => {Navigator.pushNamed(context, Constants.ROOUTE_NAME_TO_WORKOUT_LIST_PAGE, arguments: WorkoutListParams(WorkoutLevelType.intermediate, WorkoutType.shoulder))},
+                      child: PlayPanel(WorkoutListParams(WorkoutLevelType.intermediate, WorkoutType.shoulder))),
+
+                    Center(child: Text('level_advanced.title'.tr(), style: Theme.of(context).textTheme.headline6,)),
+                    InkWell(
+                      onTap: () => {Navigator.pushNamed(context, Constants.ROOUTE_NAME_TO_WORKOUT_LIST_PAGE, arguments: WorkoutListParams(WorkoutLevelType.advanced, WorkoutType.arm))},
+                      child: PlayPanel(WorkoutListParams(WorkoutLevelType.advanced, WorkoutType.arm))), 
+                    InkWell(
+                      onTap: () => {Navigator.pushNamed(context, Constants.ROOUTE_NAME_TO_WORKOUT_LIST_PAGE, arguments: WorkoutListParams(WorkoutLevelType.advanced, WorkoutType.leg))},
+                      child: PlayPanel(WorkoutListParams(WorkoutLevelType.advanced, WorkoutType.leg))), 
+                    InkWell(
+                      onTap: () => {Navigator.pushNamed(context, Constants.ROOUTE_NAME_TO_WORKOUT_LIST_PAGE, arguments: WorkoutListParams(WorkoutLevelType.advanced, WorkoutType.abs))},
+                      child: PlayPanel(WorkoutListParams(WorkoutLevelType.advanced, WorkoutType.abs))), 
+                    InkWell(
+                      onTap: () => {Navigator.pushNamed(context, Constants.ROOUTE_NAME_TO_WORKOUT_LIST_PAGE, arguments: WorkoutListParams(WorkoutLevelType.advanced, WorkoutType.chest))},
+                      child: PlayPanel(WorkoutListParams(WorkoutLevelType.advanced, WorkoutType.chest))),
+                    InkWell(
+                      onTap: () => {Navigator.pushNamed(context, Constants.ROOUTE_NAME_TO_WORKOUT_LIST_PAGE, arguments: WorkoutListParams(WorkoutLevelType.advanced, WorkoutType.shoulder))},
+                      child: PlayPanel(WorkoutListParams(WorkoutLevelType.advanced, WorkoutType.shoulder))),
+                  ],
+                ),
+              ],
+            )
+          ) 
         ],
       ),      
     );
@@ -43,8 +123,8 @@ class _HomePageState extends State<HomePage> {
   
   ClipPath buildClipPath() {
     final size = MediaQuery.of(context).size;
-    final sizeClipPath = size.height * .4;
-    const txtCountStyle = TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 28);
+    final sizeClipPath = size.height * .25;
+    const txtCountStyle = TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 22);
     const txtDescStyle = TextStyle(fontWeight: FontWeight.bold, color: Colors.white70, fontSize: 16);
     
     Widget txtHeader(String count, String text){
@@ -75,7 +155,7 @@ class _HomePageState extends State<HomePage> {
                child: Column(
                  children: <Widget>[
                    Padding(
-                     padding: EdgeInsets.only(top: sizeClipPath * .2),
+                     padding: EdgeInsets.only(top: sizeClipPath * .45),
                      child: Row(               
                        mainAxisAlignment: MainAxisAlignment.spaceAround,
                        crossAxisAlignment: CrossAxisAlignment.center, 

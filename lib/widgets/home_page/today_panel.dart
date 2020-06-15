@@ -12,6 +12,7 @@ class _TodayPanelState extends State<TodayPanel> {
   Widget build(BuildContext context) {
     return SizedBox(
       child: Card(
+        elevation: 5,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(15)),),
         color: Colors.white,
         margin: EdgeInsets.only(left: 15, right: 15),

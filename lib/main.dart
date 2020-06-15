@@ -1,21 +1,42 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:workout_hub/common/constants.dart';
+import 'package:workout_hub/common/route_generator.dart';
+import 'package:workout_hub/common/theme.dart';
 import 'package:workout_hub/pages/home_page.dart';
+import 'package:workout_hub/providers/common_provider.dart';
 
-void main() {
-  runApp(MyApp());
-}
+void main() => runApp(
+  EasyLocalization(
+      supportedLocales: [Locale('en'), Locale('ru'), Locale('uk')],
+      path: 'assets/translations', 
+      fallbackLocale: Locale('en'),
+      child: MultiProvider(    
+        providers: [
+            ChangeNotifierProvider(create: (_) => CommonProvider()),
+        ],
+      child:MyApp()
+  )
+    ),
+  
+);
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
+
+      initialRoute: Constants.ROOUTE_NAME_TO_INIT_PAGE,
+      debugShowCheckedModeBanner: false,
+      title: 'title_app'.tr(),
+      theme: appTheme(),
       home: HomePage(),
+      onGenerateRoute:  (RouteSettings settings) {return RouteGenerator.generateRoute(settings);},
     );
   }
 }

@@ -1,0 +1,44 @@
+{
+    "title_app":"Workout HUB",
+    "start": "Start",
+    "level_beginner":{
+        "title":"Beginner",
+        "abs":"ABS beginner",
+        "arm":"ARM beginner",
+        "chest":"Chest beginner",
+        "leg":"Leg beginner",
+        "shoulder":"Shoulder beginner"
+    },
+    "level_intermediate":{
+        "title":"Intermediate",
+        "abs":"ABS intermediate",
+        "arm":"ARM intermediate",
+        "chest":"Chest intermediate",
+        "leg":"Leg intermediate",
+        "shoulder":"Shoulder intermediate"
+    },
+    "level_advanced":{
+        "title":"Advanced",
+        "abs":"ABS advanced",
+        "arm":"ARM advanced",
+        "chest":"Chest advanced",
+        "leg":"Leg advanced",
+        "shoulder":"Shoulder advanced"
+    },
+
+    "home_page":{
+        "title":"Home workout"
+    },
+    
+    "reminder_page":{
+        "title":"Reminder"
+    },
+
+    "report_page":{
+        "title":"Report"
+    },
+
+    "settings_page":{
+        "title":"Settings"
+    }
+ }
