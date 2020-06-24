@@ -6,6 +6,7 @@ import 'package:workout_hub/common/route_generator.dart';
 import 'package:workout_hub/common/theme.dart';
 import 'package:workout_hub/pages/home_page.dart';
 import 'package:workout_hub/providers/common_provider.dart';
+import 'package:workout_hub/providers/workouts_provider.dart';
 
 void main() => runApp(
   EasyLocalization(
@@ -15,6 +16,7 @@ void main() => runApp(
       child: MultiProvider(    
         providers: [
             ChangeNotifierProvider(create: (_) => CommonProvider()),
+            ChangeNotifierProvider(create: (_) => WorkoutsProvider())
         ],
       child:MyApp()
   )
@@ -35,7 +37,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'title_app'.tr(),
       theme: appTheme(),
-      home: HomePage(),
+      //home: HomePage(),
       onGenerateRoute:  (RouteSettings settings) {return RouteGenerator.generateRoute(settings);},
     );
   }

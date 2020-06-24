@@ -1,7 +1,6 @@
 {
     "title_app":"Workout HUB",
-    "start": "Start",
-    "level_beginner":{
+    "level_1":{
         "title":"Beginner",
         "abs":"ABS beginner",
         "arm":"ARM beginner",
@@ -9,7 +8,7 @@
         "leg":"Leg beginner",
         "shoulder":"Shoulder beginner"
     },
-    "level_intermediate":{
+    "level_2":{
         "title":"Intermediate",
         "abs":"ABS intermediate",
         "arm":"ARM intermediate",
@@ -17,13 +16,19 @@
         "leg":"Leg intermediate",
         "shoulder":"Shoulder intermediate"
     },
-    "level_advanced":{
+    "level_3":{
         "title":"Advanced",
         "abs":"ABS advanced",
         "arm":"ARM advanced",
         "chest":"Chest advanced",
         "leg":"Leg advanced",
         "shoulder":"Shoulder advanced"
+    },
+    "buttons":{
+        "quit":"Quit",
+        "continue":"Continue",
+        "start": "Start",
+        "skip": "Skip"
     },
 
     "home_page":{
@@ -40,5 +45,131 @@
 
     "settings_page":{
         "title":"Settings"
+    },
+    "workouts":{
+        "jumping_jacks":{
+            "title":"Jumping Jacks",
+            "desc":"Is a physical jumping exercise performed by jumping to a position with the legs spread wide and the hands going overhead, sometimes in a clap, and then returning to a position with the feet together and the arms at the sides."            
+        },
+        "abdominal_crunches":{
+            "title" :"Abdominal Crunches",
+            "desc": "The crunch is one of the most popular abdominal exercises. It involves the entire abs, but primarily it works the rectus abdominis muscle and also works the obliques. It allows both building six-pack abs, and tightening the belly."            
+        },
+        "leg_raises":{
+            "title" :"Leg Raises",
+            "desc":"The leg raise is a strength training exercise which targets the iliopsoas (the anterior hip flexors). Because the abdominal muscles are used isometrically to stabilize the body during the motion, leg raises are also often used to strengthen the rectus abdominis muscle and the internal and external oblique muscles."            
+        },
+        "russian_twist":{
+            "title" :"Russian twist",
+            "desc":"The Russian twist is a type of exercise that is used to work the abdominal muscles by performing a twisting motion on the abdomen. The exercise is believed by those who practice it to build explosiveness in the upper torso, which may help in sports such as tennis, swimming, baseball, track & field, hockey, golf, lacrosse, or boxing"            
+        },
+        "heel_touch":{
+            "title" :"Heel touch",
+            "desc":"To start lay on your back, with knees flexed and feet flat on the ground, and your arms to your sides. Then lean your torso side to side, alternate touching each heel with your hands. Try not to crunch upwards during the movement; focus on bending the torso side to side. "            
+        },
+        "mountain_climbers":{
+            "title" :"Mountain Climbers",
+            "desc":"Begin in a push up position, with your hands position a little bit forward in front of the head. Start the movement by bringing one leg in to your chest, once the leg reaches this position, it fires back to an extended position as it was in the start, and the other leg then is brought forward to the chest."            
+        },
+        "plank":{
+            "title" :"Plank",
+            "desc":"Planks are done by keeping the forearms on the ground, and elevating the body to make a nice flat “plank”. Throughout the movement keep your back nice and flat, your glutes tight, and your legs flexed and extended. At no point in the movement should your hips dip down to the ground, or should they rise up making a rounded back. A variation of the plank is holding the top phase of a push up."            
+        },
+        "cobra":{
+            "title" :"Cobra stretch",
+            "desc":"The cobra stretch is a useful abdominal stretch exercise for those who spend the majority of their day hunched over a desk. This stretch provides a nice lengthening of the anterior neck muscles, shoulders, chest and abdominals."            
+        },
+        "incline_push_ups":{
+            "title" :"Incline Push-UPS",
+            "desc":"Incline pushups are a great way to start a pushup routine if you have trouble doing the basic pushup. The exercise still targets the main chest muscles (the pectoralis major and minor) but puts far less stress on your elbows and significantly reduces the amount of body weight you are lifting. Incline pushups can be done just about anywhere. All you need is a stable surface such as a table, desk, or wall. This is perfect for beginners, for anyone doing upper body and shoulder rehab, or even seniors who need to build upper body strength to improve their quality of life and independence."            
+        },
+        "push_ups":{
+            "title" : "Push-UPS",
+            "desc" : "A push-up (or press-up if the hands are wider than shoulders placing more emphasis on the pectoral muscles[citation needed]) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of the deltoids, serratus anterior, coracobrachialis and the midsection as a whole. Push-ups are a basic exercise used in civilian athletic training or physical education and commonly in military physical training."
+        },
+        "knee_push_ups":{
+            "title" : "Knee push-UPS",
+            "desc" : "To reduce the lifting load by about 50% you can do the knee push-ups. Keeping a straight line from neck to the torso is still important, so please pay attention to correct body alignment as you perform your workout."
+        },
+        "wide_arm_push_ups":{
+            "title" : "Wide arm push-UPS",
+            "desc" : "This is similar to a regular push-up, except that because your hands are set up wider than your shoulders it targets your chest more than your triceps.Place your hands on the floor just wider than shoulder width and at chest height then step your feet back behind you and lift your knees. Engage your glutes, tense your legs and brace your core to keep your body rigid."
+        },
+        "box_push_ups":{
+            "title" : "Box push-UPS",
+            "desc":"The box push up is an easier variation of the standard push up, as your reducing the weight load on your upper body, by placing your knees on the ground. "
+        },
+        "hindu_push_ups":{
+            "title" : "Hindu push-UPS",
+            "desc" : "Hindu push-ups strengthen the muscles in your upper body, build muscle, and even increase your mobility. If you can do a few normal push-ups, you should be able to do Hindu push-ups right away."
+        },                
+        "chest_stretch":{
+            "title" : "Chest Stretch",
+            "desc" : "Find a door frame, put hands on both sides of the door frame at the height of your head, and step through the door until you feel a comfortable stretch. This allows the chest to open up."
+        },                
+        "arm_raises":{
+            "title" : "Arm raises",
+            "desc" : ""
+        },                
+        "side_arm_raise":{
+            "title" : "Side arm raise",
+            "desc" : ""
+        }, 
+        "side_hop":{
+            "title" : "Side hop",
+            "desc" : ""
+        },                
+        "triceps_dips":{
+            "title" : "Triceps dips",
+            "desc" : ""
+        },                
+        "arm_circles_clockwise":{
+            "title" : "Arm circles clockwise",
+            "desc" : ""
+        },                
+        "arm_circles_counterclockwise":{
+            "title" : "Arm circles counterclockwise",
+            "desc" : ""
+        },                
+        "diamond_push_ups":{
+            "title" : "Diamond push-ups",
+            "desc" : ""
+        },                
+        "chest_press_pulse":{
+            "title" : "Chest press pulse",
+            "desc" : ""
+        },                
+        "leg_barbel_curl_left":{
+            "title" : "Leg barbel curl left",
+            "desc" : ""
+        },                
+        "leg_barbel_curl_rigth":{
+            "title" : "Leg barbel curl rigth",
+            "desc" : ""
+        },                
+        "diagonal_plank":{
+            "title" : "Diagonal plank",
+            "desc" : ""
+        },                
+        "punches":{
+            "title" : "Punches",
+            "desc" : ""
+        },                
+        "wall_push_ups":{
+            "title" : "Wall push-ups",
+            "desc" : ""
+        },                
+        "standing_biceps_stretch_left":{
+            "title" : "Standing biceps stretch left",
+            "desc" : ""
+        },                
+        "standing_biceps_stretch_rigth":{
+            "title" : "Standing biceps stretch rigth",
+            "desc" : ""
+        },
+        "squats":{
+            "title":"Squats",
+            "desk":""
+        }
     }
  }

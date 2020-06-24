@@ -8,15 +8,15 @@ String getLevelTitle(WorkoutListParams params){
     if(params.level == WorkoutLevelType.beginner){
       switch(params.type){
         case WorkoutType.abs:
-          return 'level_beginner.abs'.tr();
+          return 'level_1.abs'.tr();
         case WorkoutType.arm:
-          return 'level_beginner.arm'.tr();
+          return 'level_1.arm'.tr();
         case WorkoutType.chest:
-          return 'level_beginner.chest'.tr();
+          return 'level_1.chest'.tr();
         case WorkoutType.leg:
-          return 'level_beginner.leg'.tr();
+          return 'level_1.leg'.tr();
         case WorkoutType.shoulder:
-          return 'level_beginner.shoulder'.tr();
+          return 'level_1.shoulder'.tr();
         default:
           throw(ErrorMessages.WORKOUT_TYPE_IS_NOT_FOUND); 
       } 
@@ -24,15 +24,15 @@ String getLevelTitle(WorkoutListParams params){
     else if(params.level == WorkoutLevelType.intermediate){
       switch(params.type){
         case WorkoutType.abs:
-          return 'level_intermediate.abs'.tr();
+          return 'level_2.abs'.tr();
         case WorkoutType.arm:
-          return 'level_intermediate.arm'.tr();
+          return 'level_2.arm'.tr();
         case WorkoutType.chest:
-          return 'level_intermediate.chest'.tr();
+          return 'level_2.chest'.tr();
         case WorkoutType.leg:
-          return 'level_intermediate.leg'.tr();
+          return 'level_2.leg'.tr();
         case WorkoutType.shoulder:
-          return 'level_intermediate.shoulder'.tr();
+          return 'level_2.shoulder'.tr();
         default:
           throw(ErrorMessages.WORKOUT_TYPE_IS_NOT_FOUND); 
       } 
@@ -40,15 +40,15 @@ String getLevelTitle(WorkoutListParams params){
     else if(params.level == WorkoutLevelType.advanced){
       switch(params.type){
         case WorkoutType.abs:
-          return 'level_advanced.abs'.tr();
+          return 'level_3.abs'.tr();
         case WorkoutType.arm:
-          return 'level_advanced.arm'.tr();
+          return 'level_3.arm'.tr();
         case WorkoutType.chest:
-          return 'level_advanced.chest'.tr();
+          return 'level_3.chest'.tr();
         case WorkoutType.leg:
-          return 'level_advanced.leg'.tr();
+          return 'level_3.leg'.tr();
         case WorkoutType.shoulder:
-          return 'level_advanced.shoulder'.tr();
+          return 'level_3.shoulder'.tr();
         default:
           throw(ErrorMessages.WORKOUT_TYPE_IS_NOT_FOUND); 
       } 
