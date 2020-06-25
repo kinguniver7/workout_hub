@@ -76,3 +76,13 @@ String getLevelTitle(WorkoutListParams params){
   String getLevelImage(WorkoutListParams params){
     return 'assets/icons/rate_${params.level}.svg';
   }
+
+  String formatSeconds(int seconds){
+    final duration = Duration(seconds: seconds);
+    
+    String twoDigits(int n) => n.toString().padLeft(2, "0");
+    String twoDigitMinutes = twoDigits(duration.inMinutes.remainder(60));
+    String twoDigitSeconds = twoDigits(duration.inSeconds.remainder(60));
+    return "$twoDigitMinutes:$twoDigitSeconds";
+
+  }

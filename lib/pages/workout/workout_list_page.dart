@@ -90,8 +90,7 @@ class _WorkoutListPageState extends State<WorkoutListPage> {
     );
   }
 
-  SliverChildDelegate buildReorderableSliverChild(){
-    
+  SliverChildDelegate buildReorderableSliverChild(){    
     return ReorderableSliverChildBuilderDelegate(
       (BuildContext context, int index) => WorkoutReorderableCard(workouts, index, Key('$index')),
       childCount: workouts.length
@@ -107,6 +106,6 @@ class _WorkoutListPageState extends State<WorkoutListPage> {
   }
   
   void _onStart(){
-    Navigator.pushNamed(context, Constants.ROOUTE_NAME_TO_WORKOUT_PAGE, arguments: WorkoutParams(workouts));
+    Navigator.pushNamed(context, Constants.ROOUTE_NAME_TO_WORKOUT_PAGE, arguments: WorkoutParams(workouts.where((element) => element.disable != true ).toList()));
   }
 }

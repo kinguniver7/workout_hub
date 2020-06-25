@@ -4,7 +4,6 @@ import 'package:provider/provider.dart';
 import 'package:workout_hub/common/constants.dart';
 import 'package:workout_hub/common/route_generator.dart';
 import 'package:workout_hub/common/theme.dart';
-import 'package:workout_hub/pages/home_page.dart';
 import 'package:workout_hub/providers/common_provider.dart';
 import 'package:workout_hub/providers/workouts_provider.dart';
 

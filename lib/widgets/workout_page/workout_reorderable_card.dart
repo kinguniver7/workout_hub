@@ -13,17 +13,21 @@ class WorkoutReorderableCard extends StatefulWidget {
 }
 
 class _WorkoutReorderableCardState extends State<WorkoutReorderableCard> {
-  bool isActive = true;
+  bool isActive;
+  @override
+  void initState() {
+    final curWorkout = widget.listWorkoutConfig[widget.index];
+    isActive = curWorkout.disable != null ? !curWorkout.disable : true;
+    super.initState();
+  }
+  
   @override
   Widget build(BuildContext context) {
     return Card(
       margin: EdgeInsets.all(4),
       color: Colors.white,
       child: InkWell(
-        //splashColor: Theme.of(context).primaryColor,
-        onTap: () => /* Fluttertoast.showToast(
-            msg: "Item ${widget.listItems[widget.index]} selected.",
-            toastLength: Toast.LENGTH_SHORT) */{_showDialog()},
+        onTap: _showDialog,
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[

@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 import 'package:workout_hub/common/constants.dart';
-import 'package:workout_hub/model/enums/workout_level_type.dart';
-import 'package:workout_hub/model/enums/workout_type.dart';
 import 'package:workout_hub/model/params/workout_lits_params.dart';
 import 'package:workout_hub/model/workout_model.dart';
 import 'package:workout_hub/providers/workouts_provider.dart';

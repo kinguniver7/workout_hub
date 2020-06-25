@@ -74,6 +74,19 @@ class _LeftDrawerState extends State<LeftDrawer> {
               );
             },
           ),
+          Consumer<CommonProvider>(
+            builder: (context, model, _){
+              return ListTile(
+                leading: Icon(Icons.settings),
+                title: Text('finish_page.title').tr(),
+                selected: model.selectedRouteName == Constants.ROOUTE_NAME_TO_FINISH_PAGE,
+                onTap: () { 
+                  Navigator.pushNamedAndRemoveUntil(context, Constants.ROOUTE_NAME_TO_FINISH_PAGE,(Route<dynamic> route) => false);
+                  model.selectedRouteName = Constants.ROOUTE_NAME_TO_FINISH_PAGE;                                  
+                },
+              );
+            },
+          ),
         ],
       )
     );

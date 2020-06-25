@@ -6,6 +6,7 @@ import 'package:workout_hub/pages/home_page.dart';
 import 'package:workout_hub/pages/reminder_page.dart';
 import 'package:workout_hub/pages/report_page.dart';
 import 'package:workout_hub/pages/settings_page.dart';
+import 'package:workout_hub/pages/workout/finish_page.dart';
 import 'package:workout_hub/pages/workout/workout_list_page.dart';
 import 'package:workout_hub/pages/workout/workout_page.dart';
 
@@ -41,6 +42,16 @@ class RouteGenerator{
         }
         //TODO:Need to add log
         return HomePage();
+      case Constants.ROOUTE_NAME_TO_FINISH_PAGE:
+        return FinishPage();
+        /* if(settings.arguments != null){
+          final WorkoutParams params = settings.arguments as WorkoutParams;
+          if(params != null){
+            return WorkoutPage(params);            
+          }
+        } */
+        //TODO:Need to add log
+        //return HomePage();
       case Constants.ROOUTE_NAME_TO_INIT_PAGE:       
       default:
         return HomePage(); 

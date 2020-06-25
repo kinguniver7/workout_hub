@@ -14,6 +14,8 @@ class WorkoutConfigModel{
   int repeats;
   bool disable;
 
+  String get desc => time != null ? "00:$time" : "x${repeats??0}";
+
   WorkoutConfigModel.fromJson(Map<String, dynamic> json)
     : workoutAliase = json['workoutAliase'],
     time = json['time'],

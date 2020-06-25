@@ -5,5 +5,7 @@ class Constants{
   static const String ROOUTE_NAME_TO_SETTINGS_PAGE = '/settings';
 
   static const String ROOUTE_NAME_TO_WORKOUT_LIST_PAGE = '/workout_list';
-   static const String ROOUTE_NAME_TO_WORKOUT_PAGE = '/workout';
+  static const String ROOUTE_NAME_TO_WORKOUT_PAGE = '/workout';
+  static const String ROOUTE_NAME_TO_FINISH_PAGE = '/finish';
+
 }

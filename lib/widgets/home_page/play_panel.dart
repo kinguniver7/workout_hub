@@ -19,7 +19,7 @@ class PlayPanel extends StatelessWidget {
               clipBehavior: Clip.antiAliasWithSaveLayer,      
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(15)),),
               color: Colors.white,
-              margin: EdgeInsets.only(left: 15, right: 15),
+              margin: EdgeInsets.only(left: 15, right: 15, top: 8, bottom: 8),
               elevation: 5,
               child: Hero(
                 tag: "${params.type}_${params.level}",

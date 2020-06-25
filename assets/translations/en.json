@@ -28,7 +28,11 @@
         "quit":"Quit",
         "continue":"Continue",
         "start": "Start",
-        "skip": "Skip"
+        "skip": "Skip",
+        "next":"Next",
+        "prev":"Prev",
+        "done_all":"Done",
+        "plus_10":"+10"
     },
 
     "home_page":{
@@ -45,6 +49,10 @@
 
     "settings_page":{
         "title":"Settings"
+    },
+
+    "finish_page":{
+        "title":"Finish"
     },
     "workouts":{
         "jumping_jacks":{
