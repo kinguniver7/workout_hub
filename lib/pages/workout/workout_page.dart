@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:intervalprogressbar/intervalprogressbar.dart';
 import 'package:percent_indicator/percent_indicator.dart';
+import 'package:workout_hub/common/constants.dart';
 import 'package:workout_hub/common/helpers/workout_helpers.dart';
 import 'package:workout_hub/model/params/workout_params.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -216,7 +217,9 @@ class _WorkoutPageState extends State<WorkoutPage> {
         color: Colors.white,
         child: Center(
           child: RaisedButton.icon(
-            onPressed: ()=>{},
+            onPressed: ()=>{
+              _onGoToFinishPage()
+            },
             color: Theme.of(context).primaryColor,
             textColor: Colors.white,
             shape: RoundedRectangleBorder(
@@ -337,12 +340,15 @@ class _WorkoutPageState extends State<WorkoutPage> {
     )) ?? false;
   }
   
+  void _onGoToFinishPage(){
+    Navigator.popAndPushNamed(context, Constants.ROOUTE_NAME_TO_FINISH_PAGE);
+  }
+
   /// Presents a event go to next workout
   void _onNextCard(){    
     setState(()=>{
       _curIndex++,  
-      _showPreTimer = true,
-                          
+      _showPreTimer = true,                          
     });
     _curTick = 10 ;
     _stopTimer();
@@ -386,7 +392,7 @@ class _WorkoutPageState extends State<WorkoutPage> {
           _stopTimer();
           if(_curIndex < widget.params.workouts.length - 1){
             _onNextCard();
-          }          
+          }        
         }
       });    
     }    

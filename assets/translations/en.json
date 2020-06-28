@@ -26,6 +26,8 @@
     },
     "buttons":{
         "quit":"Quit",
+        "save":"Save",
+        "share":"Share",
         "continue":"Continue",
         "start": "Start",
         "skip": "Skip",
@@ -33,6 +35,21 @@
         "prev":"Prev",
         "done_all":"Done",
         "plus_10":"+10"
+    },
+    "labels":{
+        "duration":"Duration",
+        "kcal":"kcal",
+        "share":{
+            "subject":"Share 'Workout HUB' with you",
+            "text":"I have finished 'Workout HUB' - Abs Workouts. You should start working out at home too. Rock hard abs are within your reach! Please download the app:https://example.com"
+        }
+    },
+    "feelings":{
+        "angry":"Angry",
+        "tired":"Tired",
+        "okay":"Okay",
+        "good":"Good",
+        "excited":"Excited"
     },
 
     "home_page":{
