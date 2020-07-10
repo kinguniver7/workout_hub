@@ -345,16 +345,18 @@ class _WorkoutPageState extends State<WorkoutPage> {
   }
 
   /// Presents a event go to next workout
-  void _onNextCard(){    
-    setState(()=>{
-      _curIndex++,  
-      _showPreTimer = true,                          
-    });
+  void _onNextCard(){   
+    if(widget.params.workouts.length - 1 > _curIndex){
+       setState(()=>{
+        _curIndex++,  
+        _showPreTimer = true,                          
+      });
     _curTick = 10 ;
     _stopTimer();
-    _startTimer(_onTickPreTimer);
-    //_startNextTimer();
-    
+   _startTimer(_onTickPreTimer);
+    }else{
+      _onGoToFinishPage();
+    } 
   }
 
   /// Presents a event go to prev workout
